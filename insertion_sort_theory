@@ -1,0 +1,16 @@
+INSERTION SORT :
+PROCESS ->
+1. Initial Unsorted array : 5 3 7 1 9
+2. After first iteration : 5 | 3 7 1 9 
+   We see that, 5 is in the correct position as no other element is in the sorted array.
+3. After second iteration : 3 5 | 7 1 9
+As 3 is the next element to be inserted in the sorted array, therefore, we insert 3 into its perfect location, i.e., before 5 and shift the remaining array towards the right.
+4. After third iteration : 3 5 7 | 1 9
+   Array remains the same as 7 is greater than the last element of the sorted array and hence, the existing order is already sorted.
+5. After fourth iteration : 1 3 5 7 | 9
+   We find the correct position of 1 by comparing it to 1st : 7, as 1 is smaller than we compare is with 2nd : 5, as 1 is again smaller than we compare it to 3rd : 3 and    1 is again smaller. As now the sorted part of the array is over therefore, we insert 1 here and move the rest of the sorted array elements each by 1 position.
+6. After fifth iteration : 1 3 5 7 9 
+   We find the correct position of 9 by comparing it to 1st : 7, as 9 is greater than 7 therefore, it is already at its correct position.
+7. Now as the unsorted part is over, this means the array is sorted now so, we return this sorted array.
+
+TIME COMPLEXITY OF INSERTION SORT : O(N^2)
