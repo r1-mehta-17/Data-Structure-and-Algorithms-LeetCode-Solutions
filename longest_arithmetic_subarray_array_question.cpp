@@ -1,3 +1,51 @@
+// APPROACH 1 :
+// TIME COMPLEXITY of the code given below is O(N).
+
+#include <bits/stdc++.h>
+using namespace std;
+int longest_arithmetic_subarray (vector <int> arr) {
+    int j = 2;
+    int ans = 2;
+    int pd = arr[0] - arr[1];
+    int curr = 2;
+    while (j < arr.size()) {
+        if (arr[j-1] - arr[j] == pd) {
+            curr++;
+        } else {
+            pd = arr[j-1] - arr[j];
+            curr = 2;
+        }
+        ans = max(ans,curr);
+        j++;
+    }
+    return ans;
+}
+int main() {
+    int n; 
+    vector <int> arr;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int temp;
+        cin >> temp;
+        arr.push_back(temp);
+    }
+    int len = longest_arithmetic_subarray (arr);
+    cout << len << endl;
+    return 0;
+}
+
+/*
+SAMPLE INPUT :
+7 
+10 7 4 6 8 10 11
+SAMPLE OUTPUT :
+4
+*/
+
+
+// APPROACH 2 :
+// TIME COMPLEXITY of the code given below is O(N^2).
+
 #include <bits/stdc++.h>
 using namespace std;
 int longest_arithmetic_subarray (vector <int> arr) {
