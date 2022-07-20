@@ -36,6 +36,34 @@ public:
 };
 
 /*
+THE CODE BELOW IS PERFECT AS PER THE CONDITIONS MENTIONED IN THE QUESTION. THE TIME COMPLEXITY IS O(N)
+*/
+class Solution {
+public:
+    int firstMissingPositive(vector<int>& nums) {
+        int arr[1000000] = {0};
+        int i=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]>1000000){
+                continue;
+            }
+            else if(nums[i]>=0){
+                arr[nums[i]]++;
+            } else {
+                continue;
+            }
+        }
+        
+        for(i=1; i<1000000;i++){
+            if(arr[i] == 0){
+                break;
+            }
+        }
+        return i;
+    }
+};
+
+/*
 SAMPLE INPUT1 :
 [1,2,0]
 SAMPLE OUTPUT1:
