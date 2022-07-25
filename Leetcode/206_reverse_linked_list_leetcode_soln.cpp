@@ -26,3 +26,10 @@ public:
         return head;
     }
 };
+
+/*
+SAMPLE INPUT : 
+[1,2,3,4,5]
+SAMPLE OUTPUT : 
+[5,4,3,2,1]
+*/
