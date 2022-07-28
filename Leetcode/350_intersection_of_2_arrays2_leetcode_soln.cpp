@@ -26,5 +26,6 @@ SAMPLE INPUT :
 [4,9,5]
 [9,4,9,8,4]
 SAMPLE OUTPUT : 
-
+[2,2]
+[4,9]
 */
