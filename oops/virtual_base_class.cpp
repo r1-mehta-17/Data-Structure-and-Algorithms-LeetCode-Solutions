@@ -63,3 +63,12 @@ int main() {
     aarekh.display();
     return 0;
 }
+
+/*
+Your roll number is 420
+Your result is here : 
+Maths : 99.5
+Physics : 99
+Your PT score is 10
+Your total score is 208.5
+*/
