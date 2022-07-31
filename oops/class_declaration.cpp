@@ -30,3 +30,9 @@ int main() {
     cout << kanav.id << " : " << kanav.salary << endl;
     return 0;
 }
+
+/*
+OUTPUT :
+1 : 100
+2 : 101
+*/
