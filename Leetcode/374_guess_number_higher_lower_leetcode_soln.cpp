@@ -21,12 +21,11 @@ Return the number that I picked.
 class Solution {
 public:
     int guessNumber(int n) {
-        int l=0;
-        int r=n;
-        int mid = (l+r)/2;
+        long long l=0;
+        long long r=n;
+        long long mid = (l+r)/2;
         int ans=0;
         while(l<=r) {
-            mid = (l+r)/2;
             if(guess(mid) == 1) {
                 l=mid+1;
             } else if(guess(mid)==-1) {
@@ -35,9 +34,9 @@ public:
                 ans = mid;
                 break;
             }
+            mid = (l+r)/2;
         }
-        return ans;
-        
+        return ans;  
     }
 };
 
